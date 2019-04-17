@@ -44,8 +44,8 @@ public class PruebaTest {
 	@Test
 	public void testClone() {
 		Complejo c1 = new Complejo(2,3);
-		Complejo c2 = new Complejo();
-		c2.clone(c1);
+		Complejo c2 = c1.clone();
+		
 		assertEquals(c1, c2);
 	}
 	

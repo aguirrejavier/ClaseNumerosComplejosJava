@@ -9,7 +9,7 @@ public class Complejo implements Comparable<Complejo> {
 		this.real = 0.0;
 		this.imaginario=0.0;
 	}
-	
+
 	public Complejo(double real, double imaginario) {
 		this.real = real;
 		this.imaginario = imaginario;
@@ -38,31 +38,29 @@ public class Complejo implements Comparable<Complejo> {
 		return multiplico;
 	}
 	
-	public Complejo mulplicar(Complejo num) {
+	public Complejo multiplicar(Complejo num) {
 		
 		double real = this.real* num.real - this.imaginario * num.imaginario;
 		double imaginario = this.real* num.imaginario + this.imaginario * num.real;
-		
 		return new Complejo(real,imaginario);
 	}
-	
+
+	public Complejo clone() {
+		Complejo clon = new Complejo(this.real,this.imaginario);
+		return clon;
+	}
 	@Override
 	public int compareTo(Complejo otro) { // SIRVE PARA ORDENAR SOLO UNO POR CLASE // EN ESTE CASO POR MODULOS
 		return this.moduloDeUnComplejo().compareTo(otro.moduloDeUnComplejo());
 	}
-	public Double moduloDeUnComplejo() {
-		
+	public Double moduloDeUnComplejo() {	
 		return Math.sqrt(Math.pow(this.real, 2)+Math.pow(this.imaginario, 2));
 	}
-	public void clone(Complejo c1) {
-		
-		this.real = c1.real;
-		this.imaginario = c1.imaginario;
-	}
-
+	
 	@Override
 	public String toString() {
-		return real +" + "+ imaginario + "i";
+		
+		return String.format("%.2f",real)+" + "+ String.format("%.2f",imaginario) + "i";
 	}
 
 	@Override
