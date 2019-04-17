@@ -8,13 +8,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class PruebaTest {
-	
-	
-	@Test
-	public void fantasmaTest() {
-		System.out.println("fantasma");
-	}
-	
+		
 	@Test
 	public void queSuma() {
 		Complejo c1 = new Complejo(2,3);
