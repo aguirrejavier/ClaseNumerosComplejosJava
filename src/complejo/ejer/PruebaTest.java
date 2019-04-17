@@ -11,6 +11,11 @@ public class PruebaTest {
 	
 	
 	@Test
+	public void fantasmaTest() {
+		System.out.println("fantasma");
+	}
+	
+	@Test
 	public void queSuma() {
 		Complejo c1 = new Complejo(2,3);
 		Complejo c2 = new Complejo(3,3);
